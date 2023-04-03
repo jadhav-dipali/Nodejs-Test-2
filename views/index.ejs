@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      th,tr,td,table{
+        border: 2px solid;
+        border-collapse: collapse;
+      } 
+      th{
+        padding: 10px;
+      } 
+      td{
+        padding: 5px;
+      }
+      th,td{
+        text-align: center;
+      }
+      table{
+        width: 60%;
+        margin-top: 30px;
+        margin-left: 20%;
+      }
+      button{
+        margin-top: 20px;
+        margin-left: 45%;
+        height: 40px;
+        width: 120px;
+        border-radius: 5px;
+      }
+    h1{text-align: center;}
+    </style>
+</head>
+<body>
+    <h1><i>DETAILS</i></h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>City</th>
+            <th>Age</th>
+            <th>Profession</th>
+        </tr>
+     
+        <tbody>
+            <% for(let i = 0 ; i<readData.length ; i++){%>
+            <tr >
+                <td><%= readData[i].name %></td>
+                <td><%= readData[i].email %></td>
+                <td><%= readData[i].city %></td>
+                <td><%= readData[i].age %></td>
+                <td><%= readData[i].profession %></td>
+            </tr><%}%>
+        </tbody>
+    
+    </table>
+  <a href="/form"><button>Add</button></a> 
+
+</body>
+</html>
